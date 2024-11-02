@@ -11,6 +11,7 @@ pandas = "*"
 seaborn = "*"
 scikit-learn = "*"
 missingno = "*"
+xgboost = "*"
 
 [dev-packages]
 ipykernel = "*"
