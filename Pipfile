@@ -12,6 +12,7 @@ seaborn = "*"
 scikit-learn = "*"
 missingno = "*"
 xgboost = "*"
+threadpoolctl = "==3.1.0"
 
 [dev-packages]
 ipykernel = "*"
