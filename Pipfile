@@ -4,18 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-scipy = "*"
-statsmodels = "*"
-numpy = "*"
 pandas = "*"
+xgboost = "*"
 seaborn = "*"
 scikit-learn = "*"
-missingno = "*"
-xgboost = "*"
-threadpoolctl = "==3.1.0"
+matplotlib = "*"
 
 [dev-packages]
 ipykernel = "*"
-
-[requires]
-python_version = "3.11"
