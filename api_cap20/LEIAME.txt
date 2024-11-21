@@ -1,0 +1,17 @@
+# Projeto 10 - Construindo API Para Deploy do Modelo de Deep Learning
+
+# Instruções
+
+# 1 - Abra o terminal ou prompt de comando.
+
+# 2 - Navegue até a pasta onde estão os arquivos do projeto.
+
+# 3 - Execute o comando abaixo para iniciar a app da API:
+
+python app.py
+
+# 4 - Abra outro terminal ou prompt de comando. Navegue até a pasta onde estão os arquivos do projeto.
+
+# 5 - Execute o comando abaixo para executar o cliente e consumir a API, extraindo assim a previsão do modelo:
+
+python cliente.py
