@@ -1,0 +1,20 @@
+[2025-03-25T00:38:06.567+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-25T00:38:06.576+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: projeto5.dsa_transforma_dados scheduled__2025-03-25T00:37:00+00:00 [queued]>
+[2025-03-25T00:38:06.579+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: projeto5.dsa_transforma_dados scheduled__2025-03-25T00:37:00+00:00 [queued]>
+[2025-03-25T00:38:06.579+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-03-25T00:38:06.584+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): dsa_transforma_dados> on 2025-03-25 00:37:00+00:00
+[2025-03-25T00:38:06.586+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=204) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-25T00:38:06.587+0000] {standard_task_runner.py:63} INFO - Started process 205 to run task
+[2025-03-25T00:38:06.587+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'projeto5', 'dsa_transforma_dados', 'scheduled__2025-03-25T00:37:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/projeto5.py', '--cfg-path', '/tmp/tmpu8x97sa6']
+[2025-03-25T00:38:06.588+0000] {standard_task_runner.py:91} INFO - Job 10: Subtask dsa_transforma_dados
+[2025-03-25T00:38:06.604+0000] {task_command.py:426} INFO - Running <TaskInstance: projeto5.dsa_transforma_dados scheduled__2025-03-25T00:37:00+00:00 [running]> on host ecff7bb19c75
+[2025-03-25T00:38:06.638+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Data Science Academy' AIRFLOW_CTX_DAG_ID='projeto5' AIRFLOW_CTX_TASK_ID='dsa_transforma_dados' AIRFLOW_CTX_EXECUTION_DATE='2025-03-25T00:37:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-25T00:37:00+00:00'
+[2025-03-25T00:38:06.638+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-25T00:38:06.643+0000] {python.py:237} INFO - Done. Returned value was: [{'city': 'Indaiatuba', 'date': '2025-03-25', 'temperature': 23.39, 'weather': 'clear sky'}, {'city': 'Blumenau', 'date': '2025-03-25', 'temperature': 25.95, 'weather': 'clear sky'}, {'city': 'Palmas', 'date': '2025-03-25', 'temperature': 23.79, 'weather': 'overcast clouds'}, {'city': 'Joinville', 'date': '2025-03-25', 'temperature': 25.89, 'weather': 'few clouds'}, {'city': 'Santos', 'date': '2025-03-25', 'temperature': 26.64, 'weather': 'clear sky'}, {'city': 'Curitiba', 'date': '2025-03-25', 'temperature': 20.21, 'weather': 'few clouds'}, {'city': 'Fortaleza', 'date': '2025-03-25', 'temperature': 27.76, 'weather': 'few clouds'}, {'city': 'Manaus', 'date': '2025-03-25', 'temperature': 25.64, 'weather': 'scattered clouds'}, {'city': 'Betim', 'date': '2025-03-25', 'temperature': 21.98, 'weather': 'overcast clouds'}, {'city': 'Juazeiro', 'date': '2025-03-25', 'temperature': 28.46, 'weather': 'scattered clouds'}]
+[2025-03-25T00:38:06.644+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-25T00:38:06.653+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=projeto5, task_id=dsa_transforma_dados, run_id=scheduled__2025-03-25T00:37:00+00:00, execution_date=20250325T003700, start_date=20250325T003806, end_date=20250325T003806
+[2025-03-25T00:38:06.686+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-03-25T00:38:06.696+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-25T00:38:06.697+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

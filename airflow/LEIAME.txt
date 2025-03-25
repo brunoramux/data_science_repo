@@ -1,0 +1,24 @@
+# Para instalar e executar o Apache Airflow siga os passos abaixo:
+
+1- Faça o download do arquizo zip ao final deste capítulo.
+
+2- Descompacte o arquivo e coloque em uma pasta no seu computador sem espaço no nome e sem acento.
+
+3- Abra o terminal ou prompt de comando e navegue até a pasta onde estão os arquivos.
+
+4- Execute o comando abaixo para criar as imagens Docker do Airflow e inicializar o banco de dados:
+
+docker compose up airflow-init
+
+5- Execute o comando abaixo para inicializar o Airflow:
+
+docker compose up
+
+6- Abra o navegador e efetue login. 
+
+http://localhost:8080/login
+
+User: airflow
+Senha: airflow
+
+Obs: Se você tiver o PostgreSQL instalado na sua máquina rodando na porta 5432 desligue-o ou haverá conflito de portas impedindo a inicialização do Airflow.

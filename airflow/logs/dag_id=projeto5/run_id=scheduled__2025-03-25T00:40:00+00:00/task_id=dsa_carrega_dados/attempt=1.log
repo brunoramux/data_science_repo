@@ -1,0 +1,20 @@
+[2025-03-25T00:41:08.037+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-25T00:41:08.045+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: projeto5.dsa_carrega_dados scheduled__2025-03-25T00:40:00+00:00 [queued]>
+[2025-03-25T00:41:08.048+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: projeto5.dsa_carrega_dados scheduled__2025-03-25T00:40:00+00:00 [queued]>
+[2025-03-25T00:41:08.048+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-03-25T00:41:08.053+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): dsa_carrega_dados> on 2025-03-25 00:40:00+00:00
+[2025-03-25T00:41:08.055+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=264) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-25T00:41:08.055+0000] {standard_task_runner.py:63} INFO - Started process 265 to run task
+[2025-03-25T00:41:08.056+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'projeto5', 'dsa_carrega_dados', 'scheduled__2025-03-25T00:40:00+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/projeto5.py', '--cfg-path', '/tmp/tmpiihc6zuk']
+[2025-03-25T00:41:08.057+0000] {standard_task_runner.py:91} INFO - Job 20: Subtask dsa_carrega_dados
+[2025-03-25T00:41:08.073+0000] {task_command.py:426} INFO - Running <TaskInstance: projeto5.dsa_carrega_dados scheduled__2025-03-25T00:40:00+00:00 [running]> on host ecff7bb19c75
+[2025-03-25T00:41:08.105+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Data Science Academy' AIRFLOW_CTX_DAG_ID='projeto5' AIRFLOW_CTX_TASK_ID='dsa_carrega_dados' AIRFLOW_CTX_EXECUTION_DATE='2025-03-25T00:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-25T00:40:00+00:00'
+[2025-03-25T00:41:08.105+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-25T00:41:08.113+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-03-25T00:41:08.113+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-25T00:41:08.116+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=projeto5, task_id=dsa_carrega_dados, run_id=scheduled__2025-03-25T00:40:00+00:00, execution_date=20250325T004000, start_date=20250325T004108, end_date=20250325T004108
+[2025-03-25T00:41:08.154+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-03-25T00:41:08.161+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-25T00:41:08.162+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
