@@ -1,0 +1,8 @@
+pyspark
+pandas
+numpy
+fastapi
+uvicorn
+streamlit
+requests
+watchdog

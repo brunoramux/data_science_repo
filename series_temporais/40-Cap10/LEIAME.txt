@@ -1,0 +1,7 @@
+# Projeto 3 - Otimização de Cadeias de Suprimentos com Modelagem de Séries Temporais
+
+# Copie os arquivos para a pasta do cluster Spark criado no Capítulo 8 (siga as instruções das aulas).
+
+# Execute o projeto:
+
+docker exec spark-master-dsa spark-submit --deploy-mode client ./jobs/projeto3.py

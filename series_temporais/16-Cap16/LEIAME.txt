@@ -1,0 +1,41 @@
+# Modelagem de Séries Temporais e Real-Time Analytics com Apache Spark e Databricks
+# Execução do Projeto 8
+
+# Abra o terminal ou prompt de comando e acesse a pasta onde estão os arquivos no seu computador
+
+# Execute o comando abaixo para criar e inicializar o Cluster
+
+docker compose -f docker-compose.yml up -d --scale spark-worker-dsa=2
+
+# Execute este comando no host para treinar e salvar o modelo e o padronizador
+
+docker exec spark-master-dsa spark-submit --deploy-mode client ./jobs/projeto8-treinamento.py
+
+NOTA: Depois de treinar o modelo pare o cluster Spark e inicialize novamente para liberar memória para o deploy!!!
+
+# Execute este comando dentro do node master para carregar um shell de dados em tempo real
+
+nc -lk 9999
+
+# Execute este comando no host para capturar dados em tempo real e entregar a previsão
+
+docker exec spark-master-dsa spark-submit --deploy-mode client ./jobs/projeto8-deploy.py
+
+# De volta ao container, digite cada uma das linhas abaixo, pressione Enter e observe o modelo fazendo a previsão em tempo real
+# As linhas 3, 4 e 5 são anomalias
+
+{"sensor_id": "sensor_1", "timestamp": "2025-10-09T15:00:00Z", "temperatura": 22.5, "umidade": 45.0, "pressao": 1013.0}
+{"sensor_id": "sensor_2", "timestamp": "2025-10-09T15:01:00Z", "temperatura": 23.0, "umidade": 50.0, "pressao": 1012.5}
+{"sensor_id": "sensor_3", "timestamp": "2025-10-09T15:02:00Z", "temperatura": 180.5, "umidade": 98.0, "pressao": 1013.2}
+{"sensor_id": "sensor_3", "timestamp": "2025-10-09T16:02:00Z", "temperatura": 24.0, "umidade": 150.0, "pressao": 1013.2}
+{"sensor_id": "sensor_2", "timestamp": "2025-10-09T17:01:00Z", "temperatura": 23.0, "umidade": 50.0, "pressao": 1.5}
+{"sensor_id": "sensor_2", "timestamp": "2025-10-09T18:01:00Z", "temperatura": 23.0, "umidade": 50.0, "pressao": 1014.5}
+
+# Spark Master
+http://localhost:9090
+
+# History Server
+http://localhost:18080
+
+# Para desligar o Cluster
+docker compose -f docker-compose.yml down

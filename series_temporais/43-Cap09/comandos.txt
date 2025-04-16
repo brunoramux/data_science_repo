@@ -1,0 +1,12 @@
+# Comandos que devem ser executados no terminal ou prompt de comando:
+
+# Comandos do Cluster Spark
+
+docker exec spark-master-dsa spark-submit --deploy-mode client ./jobs/projeto2-treino.py
+docker exec spark-master-dsa spark-submit --deploy-mode client ./jobs/projeto2-deploy.py
+
+# Comando com Python (sem Spark)
+
+python projeto2-dataviz.py
+
+
