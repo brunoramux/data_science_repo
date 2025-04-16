@@ -1,0 +1,12 @@
+transformers
+accelerate
+datasets
+datasets 
+langid
+torch
+rich
+tf-keras
+wordcloud
+matplotlib
+streamlit
+plotly
