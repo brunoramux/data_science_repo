@@ -9,6 +9,8 @@ xgboost = "*"
 seaborn = "*"
 scikit-learn = "*"
 matplotlib = "*"
+watermark = "*"
+statsmodels = "*"
 
 [dev-packages]
 ipykernel = "*"
